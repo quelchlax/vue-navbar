@@ -1,4 +1,6 @@
-# vue-navbar
+# Vue Navigation Bar Template
+
+Built with Bulma https://bulma.io/documentation/components/navbar/
 
 ## Project setup
 ```
