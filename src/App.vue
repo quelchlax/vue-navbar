@@ -1,32 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Navbar
+      id="navbar"
+      color='is-dark'
+      @display="toggleSidebar = !toggleSidebar"
+    />
+    <Sidebar :show="toggleSidebar" @close="toggleSidebar = false" />
+    <router-view class="container" />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Navbar from "@/components/global/Navbar.vue";
+import Sidebar from "@/components/global/Sidebar.vue";
+export default {
+  components: { Navbar, Sidebar },
+  data() {
+    return { toggleSidebar: false };
+  },
+};
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style lang="scss"></style>
