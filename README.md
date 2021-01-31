@@ -2,8 +2,10 @@
 
 Built with Bulma https://bulma.io/documentation/components/navbar/
 
-## Project setup
+To use this template as a starting basis for your own project use this command to clone the template.
+
 ```
+npx degit quelchlax/vue-navbar my-project && cd $_
 npm install
 ```
 
